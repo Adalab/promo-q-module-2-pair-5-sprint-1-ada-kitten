@@ -4,9 +4,9 @@ const addKitten = document.querySelector(".js-new-form");
 
 addKitten.classList.remove("collapsed");
 
-const kittenOne = document.querySelector (".js-list");
+const kittenCards = document.querySelector (".js-list");
 
-kittenOne = <li class="card">
+const kittenOne = `<li class="card">
 <article>
   <img
     class="card_img"
@@ -20,6 +20,6 @@ kittenOne = <li class="card">
     moleste. Es una maravilla acariciarle!
   </p>
 </article>
-</li>;
+</li>`;
 
 //preguntar si hay que poner un innerHTML o un add o algo
