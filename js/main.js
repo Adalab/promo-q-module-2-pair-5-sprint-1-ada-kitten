@@ -1,13 +1,5 @@
 'use strict';
 
-const addKitten = document.querySelector(".js-new-form");
-
-
-if (addKitten.classList.contains('.collapsed')) {
-  addKitten.classList.remove(".collapsed"); 
-} else {
-  addKitten.classList.add(".collapsed");
-}
 
 const kittenCards = document.querySelector (".js-list");
 
@@ -105,6 +97,41 @@ const input_search_desc = document.querySelector('.js_in_search_desc');
 //   }
 
 
-  
+ const plusButton = document.querySelector ('.js_plusButton');
+ const addKitten = document.querySelector('.js-new-form');
+
+ plusButton.addEventListener('click',(event)=>{
+  event.preventDefault()
+  console.log("He clickado");
+  if (addKitten.classList.contains('collapsed')){
+    addKitten.classList.remove('collapsed'); 
+  } else {
+    addKitten.classList.add('collapsed');
+  }
+
+ });
 
 
+
+ const formButton = document.querySelector(".js-btn-add");
+
+ const inputDesc = document.querySelector('.js-input-desc');
+ const inputPhoto = document.querySelector('.js-input-photo');
+ const inputName = document.querySelector('.js-input-name');
+ const labelMesageError = document.querySelector('.js-label-error');
+
+ formButton.addEventListener('click',(event)=>{
+  event.preventDefault()
+ console.log("He clickado");
+
+ const valueDesc = inputDesc.value;
+const valuePhoto = inputPhoto.value;
+const valueName = inputName.value;
+
+if (valueDesc === '' || valuePhoto === '' || valueName === '') {
+  labelMesageError.innerHTML = "Debe rellenar todos los valores";
+} 
+else {
+  /*FALTA AÑADIR UN ELSE*/
+}
+});
