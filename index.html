@@ -52,7 +52,7 @@
             placeholder="Nombre"
             required
           />
-          <input class="input" type="text" placeholder="Raza" />
+          <input class="input js-input-race" type="text" placeholder="Raza" />
           <input
             class="input js-input-desc"
             type="text"
@@ -61,7 +61,7 @@
           />
           <label class="js-label-error"></label>
           <button class="button js-btn-add">Añadir</button>
-          <button class="button-cancel">Cancelar</button>
+          <button class="button-cancel js-btn-cancel">Cancelar</button>
         </form>
       </section>
 
@@ -79,14 +79,16 @@
             placeholder="Descripción"
           />
           <input
-            class="input"
+            class="input js_in_search_race"
             type="select"
             name="raza"
             placeholder="Raza"
             id="raza"
           />
 
-          <button class="button">Buscar</button>
+          <label class="js-label-search-error"></label>
+
+          <button class="button js_search_btn">Buscar</button>
         </form>
       </section>
 

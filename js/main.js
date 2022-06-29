@@ -124,7 +124,7 @@ const input_search_desc = document.querySelector('.js_in_search_desc');
   event.preventDefault()
  console.log("He clickado");
 
- const valueDesc = inputDesc.value;
+const valueDesc = inputDesc.value;
 const valuePhoto = inputPhoto.value;
 const valueName = inputName.value;
 
@@ -132,6 +132,44 @@ if (valueDesc === '' || valuePhoto === '' || valueName === '') {
   labelMesageError.innerHTML = "Debe rellenar todos los valores";
 } 
 else {
-  /*FALTA AÑADIR UN ELSE*/
+  labelMesageError.innerHTML = "";
 }
 });
+
+const searchDesc = document.querySelector('.js_in_search_desc');
+const searchRace = document.querySelector ('.js_in_search_race');
+const searchBtn = document.querySelector ('.js_search_btn');
+const searchMsgError = document.querySelector ('.js-label-search-error');
+
+function handleClick (ev) {
+  ev.preventDefault();
+
+  const valueDesc = searchDesc.value;
+  const valueRace = searchRace.value;
+
+  if (valueDesc === '' && valueRace === '') {
+    searchMsgError.innerHTML = "Debe rellenar alguno de los valores";
+  } 
+  else {
+    searchMsgError.innerHTML = "";
+  }
+};
+
+searchBtn.addEventListener ('click', handleClick);
+
+
+const cancelBtn = document.querySelector ('.js-btn-cancel');
+const inputRace = document.querySelector ('.js-input-race');
+
+cancelBtn.addEventListener('click',(event)=>{
+ event.preventDefault();
+
+ addKitten.classList.add('collapsed');
+ inputPhoto.value ="";
+ inputName.value ="";
+ inputRace.value ="";
+ inputDesc.value="";
+
+});
+
+
