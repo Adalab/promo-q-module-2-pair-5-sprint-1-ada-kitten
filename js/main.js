@@ -236,3 +236,51 @@ ${desc}
 kittenCards.innerHTML += renderKitten(url1,desc1,name1,race1);
 kittenCards.innerHTML += renderKitten(url2,desc2,name2,race);
 kittenCards.innerHTML += renderKitten(url3,desc3,name3,race);
+
+
+
+// //modifica el evento para cumplir una función manejadora
+// buttonAdd.addEventListener('click', addNewKitten);
+
+// function addNewKitten(event) {
+//   //mueve el código que está dentro del evento
+// }
+
+// const inputDesc = document.querySelector('.js-input-desc');
+// const inputPhoto = document.querySelector('.js-input-photo');
+// const inputName = document.querySelector('.js-input-name');
+//const inputRace = document.querySelector ('.js-input-race');
+//const formButton = document.querySelector(".js-btn-add");
+
+
+
+const addNewKitten = (event) => {
+
+  event.preventDefault();
+
+  const urlValue = inputPhoto.value;
+  const nameValue = inputName.value;
+  const raceValue = inputRace.value;
+  const descValue = inputDesc.value;
+
+  const addKittenText = `<li class="card">
+  <img
+  class="card_img"
+  src=${urlValue}
+  alt="gatito"
+  />
+  <h3 class="card_title">${nameValue}</h3>
+  <h4 class="card_race">${raceValue}</h4>
+  <p class="card_description">
+  ${descValue}
+  </p>
+  </li>`;
+
+  return kittenCards.innerHTML += addKittenText; 
+
+}
+
+formButton.addEventListener('click', addNewKitten);
+
+
+
