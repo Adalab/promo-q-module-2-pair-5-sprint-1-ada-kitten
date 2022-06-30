@@ -169,13 +169,13 @@ const kittenOne = `<li class="card">
 <article>
   <img
     class="card_img"
-    src=${kittenImage1}
+    src=${url1}
     alt="gatito"
   />
-  <h3 class="card_title">${kittenName1.toUpperCase()}</h3>
-  <h4 class="card_race">${kittenRace1ToDisplay}</h4>
+  <h3 class="card_title">${name1.toUpperCase()}</h3>
+  <h4 class="card_race">${race1ToDisplay}</h4>
   <p class="card_description">
-   ${kittenDesc1.replace("Ruiseño", "Risueño")}
+   ${desc1.replace("Ruiseño", "Risueño")}
   </p>
 </article>
 </li>`;
@@ -186,13 +186,13 @@ const kittenOne = `<li class="card">
 const kittenTwo = `<li class="card">
 <img
   class="card_img"
-  src=${kittenImage2}
+  src=${url2}
   alt="gatito"
 />
-<h3 class="card_title">${kittenName2.toUpperCase()}</h3>
-<h4 class="card_race">${kittenRace}</h4>
+<h3 class="card_title">${name2.toUpperCase()}</h3>
+<h4 class="card_race">${race}</h4>
 <p class="card_description">
-  ${kittenDesc2}
+  ${desc2}
 </p>
 </li>`;
 
@@ -201,13 +201,13 @@ const kittenTwo = `<li class="card">
 const kittenThree = `<li class="card">
 <img
   class="card_img"
-  src=${kittenImage3}
+  src=${url3}
   alt="gatito"
 />
-<h3 class="card_title">${kittenName3.toUpperCase()}</h3>
-<h4 class="card_race">${kittenRace}</h4>
+<h3 class="card_title">${name3.toUpperCase()}</h3>
+<h4 class="card_race">${race}</h4>
 <p class="card_description">
-${kittenDesc3}
+${desc3}
 </p>
 </li>`;
 
