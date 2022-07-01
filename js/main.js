@@ -111,6 +111,9 @@ function handleClick (ev) {
   } 
   else {
     searchMsgError.innerHTML = "";
+    // if( desc1.includes(valueDesc) )
+    // kittenCards.innerHTML += renderKitten(url1,desc1,name1,race1);
+
   }
 };
 
@@ -233,6 +236,7 @@ ${desc}
   
 }
 
+
 kittenCards.innerHTML += renderKitten(url1,desc1,name1,race1);
 kittenCards.innerHTML += renderKitten(url2,desc2,name2,race);
 kittenCards.innerHTML += renderKitten(url3,desc3,name3,race);
@@ -263,6 +267,8 @@ const addNewKitten = (event) => {
   const raceValue = inputRace.value;
   const descValue = inputDesc.value;
 
+  kittenCards.innerHTML += renderKitten(urlValue,descValue,nameValue,raceValue);
+/*
   const addKittenText = `<li class="card">
   <img
   class="card_img"
@@ -272,15 +278,39 @@ const addNewKitten = (event) => {
   <h3 class="card_title">${nameValue}</h3>
   <h4 class="card_race">${raceValue}</h4>
   <p class="card_description">
-  ${descValue}
+  ${edscValue}
   </p>
   </li>`;
 
-  return kittenCards.innerHTML += addKittenText; 
-
+  kittenCards.innerHTML += addKittenText; 
+*/
 }
 
 formButton.addEventListener('click', addNewKitten);
 
+
+
+// const searchDesc = document.querySelector('.js_in_search_desc');
+// const searchRace = document.querySelector ('.js_in_search_race');
+// const searchBtn = document.querySelector ('.js_search_btn');
+
+
+
+
+const filterKitten = (event) => {
+
+  event.preventDefault();
+
+  const searchDescValue = searchDesc.value;
+  const searchRaceValue = searchRace.value;
+
+  if (kittenCards..includes(descrSearchText)) {
+    listElement.innerHTML += kittenOne;
+  }
+};
+
+
+
+searchBtn.addEventListener('click', filterKitten);
 
 
