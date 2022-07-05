@@ -320,35 +320,50 @@ const kittenData_3 = {
   race: 'British Shorthair',
 };
 
+
+
+
+ function renderKitten(kittenData) {
+   return`<li class="card">
+ <img
+   class="card_img"
+   src=${kittenData.image}
+   alt="gatito"
+ />
+ <h3 class="card_title">${kittenData.name.toUpperCase()}</h3>
+ <h4 class="card_race">${kittenData.race}</h4>
+ <p class="card_description">
+ ${kittenData.desc}
+ </p>
+ </li>`;
+
+ }
+
+//  let html = '';
+
+//  let index = 0;
+
+//  html += renderKitten (kittenDataList[index]);
+
+//  index++;
+//  html += renderKitten (kittenDataList[index]);
+
+//  index++;
+//  html += renderKitten (kittenDataList[index]);
+
+//  kittenCards.innerHTML = html;
+
+
+
 const kittenDataList = [kittenData_1,kittenData_2,kittenData_3]
 
 
-function renderKitten(kittenData) {
-  return`<li class="card">
-<img
-  class="card_img"
-  src=${kittenData.image}
-  alt="gatito"
-/>
-<h3 class="card_title">${kittenData.name.toUpperCase()}</h3>
-<h4 class="card_race">${kittenData.race}</h4>
-<p class="card_description">
-${kittenData.desc}
-</p>
-</li>`;
+function renderKittenList(arrayKitten) { //Lo que va entre paréntesis es como la x, luego lo sustituyes por el array de verdad cuando llamas a la función.
 
+  kittenCards.innerHTML = '';  // Es para limpiar el html
+  for (const kitten of arrayKitten){
+    kittenCards.innerHTML += renderKitten (kitten);
+  }
 }
 
-let html = '';
-
-let index = 0;
-
-html += renderKitten (kittenDataList[index]);
-
-index++;
-html += renderKitten (kittenDataList[index]);
-
-index++;
-html += renderKitten (kittenDataList[index]);
-
-kittenCards.innerHTML = html;
+renderKittenList(kittenDataList);  // Llamamos a la función y ponemos de parámetro el array de verdad
